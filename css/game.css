@@ -1,0 +1,7 @@
+#container{
+    justify-content: start;
+}
+
+.flex.flex-row-reversed{
+    flex-direction: row-reverse;
+}

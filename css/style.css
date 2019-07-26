@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+:root {
+    font-size: 62.5%;
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100vh;
+}
+
+#container {
+    height: inherit;
+    margin: 0 auto;
+    max-width: 54rem;
+    padding: 5rem;
+
+}
+
+#home {
+    animation-name: slide-up;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    opacity: 0;
+    animation-timing-function: ease-in;
+}
+
+#home h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex.flex-column {
+    flex-direction: column;
+}
+
+.flex.to-center-all {
+    justify-content: center;
+    align-items: center;
+}
+
+.align-center {
+    text-align: center;
+}
+
+/* 
+Buttons 
+*/
+
+.btn {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    position: relative;
+    transition: .5s;
+    margin: 0.6rem;
+}
+
+.btn:hover{
+    background-color: #333;
+    color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 1rem #333;
+    transform: translateY(-0.8rem);
+}
+
+.play:hover::after,
+.high-score:hover::after {
+    position: absolute;
+    font-size: 1rem;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play:hover::after {
+    content: "\f04b";
+}
+
+.high-score:hover::after {
+    content: "\f0b0";
+    left: 30%;
+}
+
+
+/* 
+
+Animations
+
+*/
+@keyframes slide-up {
+    from{
+        opacity: 0;
+        transform: translateY(10rem);
+    } to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
