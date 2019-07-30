@@ -4,6 +4,7 @@ body {
 
 #container {
     max-width: 70rem;
+    min-width: 70rem;
     padding: 3rem;
 }
 
@@ -17,6 +18,7 @@ body {
 #question {
     font-size: 2.3rem;
     text-align: left;
+    font-weight: 400;
 }
 
 .aws-container {
@@ -50,6 +52,7 @@ body {
     display: flex;
     align-items: center;
     font-size: 1.5rem;
+    font-weight: 200;
 }
 
 .aws-container-each>.aws-prefix {
@@ -67,6 +70,7 @@ body {
     color: #333;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
     position: relative;
+    cursor: pointer;
 }
 
 .aws-container-each>.aws.is-correct {
@@ -97,4 +101,46 @@ body {
 
 .flex.flex-row-reversed {
     flex-direction: row-reverse;
+}
+
+#hud {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.progress-out{
+    width: 40rem;
+    height: 2.5rem;
+    border: 0.2rem solid #333;
+}
+
+.progress-out>.progress{
+    width: 0;
+    height: 2.2rem;
+    background-color: #333;
+    transition: .5s;
+}
+
+.progress-text{
+    font-size: 1.3rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+}
+
+.score-container {
+    text-align: right;
+}
+
+.progress-container {
+    text-align: left;
+}
+
+.score-container>h1{
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+.score-container>.score{
+    font-size: 2rem;
+    transition: .2s;
 }
